@@ -10,14 +10,23 @@ body {
     background-image: linear-gradient(90deg, #000000 10%, #151515 74%); 
     color: white;
 }
-.container {
+.top, .title {
     display: flex;
     justify-content: center;
 }
-.container h1 {
-    padding-top: 10px;
-    font-size: 45px;
+.epic {
+    background-image: linear-gradient(90deg, #ff6c6c 10%, #f7b0b0 74%); 
 }
-h1 span {
-    color: red;
+.title {
+    padding-bottom: 10px;
+}
+.image {
+    border-radius: 50%;
+    width: 5%;
+}
+.bg-red {
+    height: 87vh;
+}
+.sub {
+    padding-top: 10px;
 }
