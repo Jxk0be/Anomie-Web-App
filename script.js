@@ -10,6 +10,14 @@ function searchAnime(event) {
     .then(response => response.json())
     .then(JSadd)
     .catch(error => console.warn(error));
+
+    fetch(`https://api.jikan.moe/v4/random/anime`)
+    .then(response => response.json())
+    .then(function (anime) {
+        console.log("RANDOM Anime: ", anime["data"].title);
+        console.log("Episodes:", anime["data"].episodes);
+        console.log("MAL:", anime["data"].url);
+    });
 }
 
 function JSadd(data) {
@@ -19,7 +27,8 @@ function JSadd(data) {
     /* Accessing the "data" property of the JSON object */
     data["data"].forEach(function(anime) { 
         console.log(anime.title);
-        console.log("Number of episodes:", anime.episodes)
+        console.log("Episodes:", anime.episodes);
+        console.log("MAL:", anime.url);
     });
 }
 

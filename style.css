@@ -30,3 +30,12 @@ body {
 .sub {
     padding-top: 10px;
 }
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    width: 50vh;
+    height: 4vh;
+}
