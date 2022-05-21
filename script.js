@@ -14,6 +14,7 @@ function searchAnime(event) {
     fetch(`https://api.jikan.moe/v4/random/anime`)
     .then(response => response.json())
     .then(function (anime) {
+        console.log(anime["data"]);
         console.log("RANDOM Anime: ", anime["data"].title);
         console.log("Episodes:", anime["data"].episodes);
         console.log("MAL:", anime["data"].url);
@@ -21,8 +22,23 @@ function searchAnime(event) {
 }
 
 function JSadd(data) {
-    /* Test case to see all the properties of the JSON object */
-    console.log(data["data"][0]);
+
+    const searchResults = document.getElementById('search-results');
+
+    searchResults.innerHTML = data.data.map(an => {
+        return `    
+        <div class="box">
+            <div class="card-image">
+                <img src="${an["images"]["webp"]["image_url"]}">
+            </div>
+            <div class="card-content">
+                <span class="card-title">${an.title}</span>
+            </div>
+            <div class="card-action">
+                <a href="${an.url}" target="_blank">MAL Link</a>
+            </div>
+        </div>
+    `}).join("");
 
     /* Accessing the "data" property of the JSON object */
     data["data"].forEach(function(anime) { 

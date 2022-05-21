@@ -27,7 +27,7 @@ li, a {
 
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 8%;
+    padding-left: 7%;
     padding-right: 10%;
 
     /* Keep navbar in place */
@@ -70,7 +70,7 @@ li, a {
 /* ------------------ Search Bar CSS ------------------ */
 .container {
     width: 100%;
-    min-height: 92vh;
+    min-height: 20vh;
     padding: 5%;
     display: flex;
     align-items: center;
@@ -111,4 +111,43 @@ li, a {
 }
 .search-bar button:hover {
     background-color: #31b80f;
+}
+
+/* ------------------ Grid Results CSS ------------------ */
+.container2 {
+    width: 80%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* This holds the entire section of results */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+/* The box is what holds each image, title, link, etc. */
+.box {
+    flex: 1 1 21rem;
+    margin: 10px 20px;
+    padding: 10px 20px;
+
+    /* This makes them line up at the top of each row */
+    align-self: normal;
+
+    /* Makes each result a flex container and lines them up as a centered column */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-content {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.card-action {
+    display: inline-block;
+}
+.card-image {
+    max-width: 300px;
 }
