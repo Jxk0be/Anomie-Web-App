@@ -57,14 +57,14 @@ li, a {
     transition: all 0.3s ease 0s;
 }
 .nav-links li a:hover {
-    color: #31b80f;
+    color: #4afc1e;
 }
 .btn {
     cursor: pointer;
     transition: all 0.3s ease 0s;
 }
 .btn:hover {
-    color: #31b80f;
+    color: #4afc1e;
 }
 
 /* ------------------ Search Bar CSS ------------------ */
