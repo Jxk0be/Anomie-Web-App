@@ -5,29 +5,35 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Anime</title>
-   <link rel="stylesheet" href="style.css">
-   <script src="script.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/38ff40852e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-   <div class="top epic"><img src = "cluseller-paperrobber-etggd.jpg" class = "image"></div>
-   <div class="title epic"><h1>Anime Recommender</h1></div>
+    <header class = "p-flex">
+        <img src = "images\Anomie-logos_white.png" alt = "Anomie logo" class="logo">
+        <nav>
+            <ul class ="nav-links">
+                <li><a href="#">Search</a></li>
+                <li><a href="#">Randomizer</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="https://github.com/Jxk0be" target="_blank">
+            <i class="gh-logo fa-2x fab fa-brands fa-github btn"></i>
+        </a>
+    </header>
 
-   <section class = "bg-red">
-      <h2 class = "top sub">Anime</h2>
+    <section>
+        <div class="container">
+            <form action="" class="search-bar" id = "search-bar" autocomplete="off">
+                <input type="text" placeholder="search for an anime" name="search">
+                <button type="submit"><i class="imgr fab fa-brands fa-searchengin"></i></button>
+            </form>
+        </div>
+    </section>
 
-      <div class="container">
-         <div class="row">
-             <form id="search_form" class="col s12">
-                 <div class="row">
-                     <div class="input-field col s6">
-                         <input placeholder="Search" name="search" id="search" type="text" class="validate">
-                     </div>
-                 </div>
-             </form>
-         </div>
-     </div>
-
-   </section>
 </body>
 </html>

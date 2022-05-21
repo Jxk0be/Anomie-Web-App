@@ -34,7 +34,7 @@ function JSadd(data) {
 
 /* Function that waits for a response from the search entry */
 function pageLoaded() {
-    const form = document.getElementById('search_form');
+    const form = document.getElementById('search-bar');
     form.addEventListener("submit", searchAnime);
 }
 
