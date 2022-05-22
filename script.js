@@ -21,6 +21,20 @@ function searchAnime(event) {
     });
 }
 
+/*
+        <div class="box">
+            <div class="card-image">
+                <img src="${an["images"]["webp"]["image_url"]}">
+            </div>
+            <div class="card-content">
+                <h4 class="card-title">${an.title}</h4>
+            </div>
+            <div class="card-action">
+                <a href="${an.url}" target="_blank">MAL Link</a>
+            </div>
+        </div>
+*/
+
 function JSadd(data) {
     const searchResults = document.getElementById('search-results');
 
@@ -28,13 +42,10 @@ function JSadd(data) {
         return `    
         <div class="box">
             <div class="card-image">
-                <img src="${an["images"]["webp"]["image_url"]}">
+                <a href = "${an.url}" target = "_blank"><img src="${an["images"]["webp"]["image_url"]}"></a>
             </div>
             <div class="card-content">
-                <span class="card-title">${an.title}</span>
-            </div>
-            <div class="card-action">
-                <a href="${an.url}" target="_blank">MAL Link</a>
+                <h4 class="card-title">${an.title}</h4>
             </div>
         </div>
     `}).join("");

@@ -35,7 +35,7 @@ li, a {
     position: sticky;
     top: 0;
     z-index: 100;
-    background-color: #101010;
+    background-color: #101010ec;
 }
 .logo {
     /* Setting the height manually, keeping width auto so it's proportions stay the same, shrink = 0 so it doesn't shrink */
@@ -152,7 +152,7 @@ li, a {
     align-items: center;
 }
 .card-content {
-    font-size: 1rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     margin: 10px 0;
 }
