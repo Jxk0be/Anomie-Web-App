@@ -27,7 +27,7 @@ li, a {
 
     padding-top: 30px;
     padding-bottom: 30px;
-    padding-left: 7%;
+    padding-left: 8.5%;
     padding-right: 10%;
 
     /* Keep navbar in place */
@@ -67,11 +67,20 @@ li, a {
     color: #4afc1e;
 }
 
+/* ------------------ Logo above Search Bar CSS ------------------ */
+.logo-2 {
+    height: auto;
+    width: 20rem;
+}
+.wrp {
+    display: flex;
+    justify-content: center;
+}
 /* ------------------ Search Bar CSS ------------------ */
 .container {
     width: 100%;
-    min-height: 20vh;
-    padding: 5%;
+    min-height: 0vh;
+    padding-bottom: 5%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -128,7 +137,8 @@ li, a {
 }
 /* The box is what holds each image, title, link, etc. */
 .box {
-    flex: 1 1 21rem;
+    flex: 1 1 2rem;
+    /* flex: 1 1 2rem; */
     margin: 10px 20px;
     padding: 10px 20px;
 

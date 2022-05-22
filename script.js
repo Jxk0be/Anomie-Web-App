@@ -22,7 +22,6 @@ function searchAnime(event) {
 }
 
 function JSadd(data) {
-
     const searchResults = document.getElementById('search-results');
 
     searchResults.innerHTML = data.data.map(an => {
