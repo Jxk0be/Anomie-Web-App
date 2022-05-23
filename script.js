@@ -3,7 +3,10 @@ function searchAnime(event) {
 
     /*  Creating memory for the form data and then saving the search 'query' inside a variable for use*/
     const form = new FormData(this);
-    const query = form.get("search");
+    let query = form.get("search");
+
+    /* If someone clears the search bar, then we use a query that gives no results */
+    if (query == "") query = "qw27g";
 
     /* This fetches the API using the search query and converts to JSON and does manipulation by calling JSadd() */
     fetch(`https://api.jikan.moe/v4/anime?q=${query}&sfw`)
@@ -56,10 +59,11 @@ function sbAdd(data) {
         return `    
         <div class="box">
             <div class="card-image">
-                <a href = "${an.url}" target = "_blank"><img src="${an["images"]["webp"]["image_url"]}"></a>
+                <a href = "${an.url}" target = "_blank"><img src="${an["images"]["jpg"]["image_url"]}"></a>
             </div>
             <div class="card-content">
-                <h4 class="card-title">${an.title}</h4>
+                <a href = "${an.url}" target = "_blank"><h3 class="card-title">${an.title}</h3></a>
+                <a href = "${an.url}" target = "_blank"><p>${an.episodes} EP</p></a>
             </div>
         </div>
     `}).join("");

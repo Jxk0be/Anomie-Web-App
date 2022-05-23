@@ -24,10 +24,11 @@ function arAdd(data) {
         return `    
         <div class="box">
             <div class="card-image">
-                <a href = "${an.url}" target = "_blank"><img src="${an["images"]["webp"]["image_url"]}"></a>
+                <a href = "${an.url}" target = "_blank"><img src="${an["images"]["jpg"]["image_url"]}"></a>
             </div>
             <div class="card-content">
-                <h4 class="card-title">${an.title}</h4>
+                <a href = "${an.url}" target = "_blank"><h3 class="card-title">${an.title}</h3></a>
+                <a href = "${an.url}" target = "_blank"><p>${an.episodes} EP</p></a>
             </div>
         </div>
     `}).join("");

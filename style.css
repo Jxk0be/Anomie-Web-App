@@ -142,7 +142,7 @@ li, a {
     flex: 1 1 2rem;
     /* flex: 1 1 2rem; */
     margin: 10px 20px;
-    padding: 10px 20px;
+    padding: 5px 10px;
 
     /* This makes them line up at the top of each row */
     align-self: normal;
@@ -153,13 +153,35 @@ li, a {
     align-items: center;
 }
 .card-content {
-    font-size: 0.9rem;
     text-transform: uppercase;
     margin: 10px 0;
+    width: 90%;
+}
+.card-content h3 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    margin: 10px 0;
+    color: rgb(243, 240, 240);
+    transition: all 0.1s ease 0s;
+}
+.card-content h3:hover {
+    color: #31b80f;
+}
+.card-content p {
+    color: rgb(243, 240, 240);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    margin: 3px 0;
+    transition: all 0.1s ease 0s;
+}
+.card-content p:hover {
+    color: #31b80f;
 }
 .card-action {
     display: inline-block;
 }
 .card-image {
     max-width: 300px;
+    flex: 1 1 20rem;
+    object-fit: cover;
 }
