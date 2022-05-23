@@ -23,8 +23,6 @@ function searchAnime(event) {
         console.log("MAL:", anime["data"].url);
     });
 
-
-
     /* This is the logic for getting the top anime and fitlering */
     let type = "movie";
     let filter = "finished";
@@ -37,24 +35,9 @@ function searchAnime(event) {
     .catch(error => console.warn(error));
 }
 
-
-/*
-        <div class="box">
-            <div class="card-image">
-                <img src="${an["images"]["webp"]["image_url"]}">
-            </div>
-            <div class="card-content">
-                <h4 class="card-title">${an.title}</h4>
-            </div>
-            <div class="card-action">
-                <a href="${an.url}" target="_blank">MAL Link</a>
-            </div>
-        </div>
-*/
-
 function sbAdd(data) {
     const searchResults = document.getElementById('search-results');
-
+    
     searchResults.innerHTML = data.data.map(an => {
         return `    
         <div class="box">
