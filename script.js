@@ -8,7 +8,7 @@ function searchAnime(event) {
     /* This fetches the API using the search query and converts to JSON and does manipulation by calling JSadd() */
     fetch(`https://api.jikan.moe/v4/anime?q=${query}&sfw`)
     .then(response => response.json())
-    .then(JSadd)
+    .then(sbAdd)
     .catch(error => console.warn(error));
 
     fetch(`https://api.jikan.moe/v4/random/anime`)
@@ -19,7 +19,21 @@ function searchAnime(event) {
         console.log("Episodes:", anime["data"].episodes);
         console.log("MAL:", anime["data"].url);
     });
+
+
+
+    /* This is the logic for getting the top anime and fitlering */
+    let type = "movie";
+    let filter = "finished";
+    let page = 1;
+    let limit = 10;
+
+    fetch(`https://api.jikan.moe/v4/top/anime?type=${type}&filter=${filter}&page=${page}`)
+    .then(response => response.json())
+    .then(data => data["data"].forEach(anime => console.log(anime.title)))
+    .catch(error => console.warn(error));
 }
+
 
 /*
         <div class="box">
@@ -35,7 +49,7 @@ function searchAnime(event) {
         </div>
 */
 
-function JSadd(data) {
+function sbAdd(data) {
     const searchResults = document.getElementById('search-results');
 
     searchResults.innerHTML = data.data.map(an => {
@@ -49,13 +63,6 @@ function JSadd(data) {
             </div>
         </div>
     `}).join("");
-
-    /* Accessing the "data" property of the JSON object */
-    data["data"].forEach(function(anime) { 
-        console.log(anime.title);
-        console.log("Episodes:", anime.episodes);
-        console.log("MAL:", anime.url);
-    });
 }
 
 /* Function that waits for a response from the search entry */
