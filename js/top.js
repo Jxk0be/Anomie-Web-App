@@ -9,7 +9,7 @@ function randomizeAnime(event) {
     let type = "tv";
     let filter = "finished";
     let page = 1;
-    let limit = 25;
+    let limit = 5;
 
     fetch(`https://api.jikan.moe/v4/top/anime?type=${type}&filter=${filter}&page=${page}&limit=${limit}`)
     .then(response => response.json())
