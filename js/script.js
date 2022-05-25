@@ -22,17 +22,6 @@ function searchAnime(event) {
         console.log("Episodes:", anime["data"].episodes);
         console.log("MAL:", anime["data"].url);
     });
-
-    /* This is the logic for getting the top anime and fitlering */
-    let type = "movie";
-    let filter = "finished";
-    let page = 1;
-    let limit = 10;
-
-    fetch(`https://api.jikan.moe/v4/top/anime?type=${type}&filter=${filter}&page=${page}`)
-    .then(response => response.json())
-    .then(data => data["data"].forEach(anime => console.log(anime.title)))
-    .catch(error => console.warn(error));
 }
 
 function sbAdd(data) {
