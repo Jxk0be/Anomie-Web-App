@@ -119,6 +119,7 @@ li, a {
     background-color: #4afc1e;
     transition: all 0.1s ease 0s;
     flex-shrink: 0;
+    cursor: pointer;
 }
 .search-bar button:hover {
     background-color: #31b80f;
@@ -141,7 +142,7 @@ li, a {
 .box {
     flex: 1 1 2rem;
     margin: 10px 20px;
-    /* padding: 8px 5px; */
+    padding: 8px 5px;
 
     /* This makes them line up at the top of each row */
     align-self: normal;
@@ -152,13 +153,15 @@ li, a {
     align-items: center;
     /* background-color: rgba(128, 128, 128, 0.148); */
 
-    background-color: #3f3e3e79;
-    max-width: 300px;
-    max-height: 450px;
+    background-color: #d7e6d509;
+    /* max-width: 270px; */
+    /* max-height: 450px; */
+    min-width: 260px;
+    max-width: 260px;
 }
 .card-content {
     text-transform: uppercase;
-    margin: 10px 0;
+    margin: 6px 0;
     width: 90%;
 }
 .card-content h3 {
@@ -175,7 +178,7 @@ li, a {
     color: rgb(243, 240, 240);
     font-size: 0.85rem;
     text-transform: uppercase;
-    /* margin: 3px 0; */
+    margin: 3px 0;
     transition: all 0.1s ease 0s;
 }
 .card-content p:hover {
@@ -185,7 +188,23 @@ li, a {
     display: inline-block;
 }
 .card-image {
-    max-width: 300px;
+    /* max-width: 250px; */
     flex: 1 1 20rem;
     object-fit: cover;
+}
+
+/* Button styling for TOP and RANDOM pages */
+.btn-1 {
+    cursor: pointer;
+    text-decoration: none;
+    padding: 20px 50px;
+}
+.btn-1:hover {
+
+}
+.cont3 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
 }
