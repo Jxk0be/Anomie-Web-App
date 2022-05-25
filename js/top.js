@@ -1,17 +1,29 @@
-function randomizeAnime(event) {
+function topAnime(event) {
     event.preventDefault();
+    let limit = 0;
 
-    /* TODO: THIS WILL HAVE TO INTERACT AND LISTEN FOR YOUR BUTTON TO BE PRESSED */
-    //const form = new FormData(this);
-    //const query = form.get("search");
+    /* Deciding what the limit query argument should be, based on what was clicked on the page */
+    if (event.target.id == 'btn5') {
+        limit = 5;
+    }
+    else if (event.target.id == 'btn10') {
+        limit = 10;
+    }
+    else if (event.target.id == 'btn15') {
+        limit = 15;
+    }
+    else if (event.target.id == 'btn20') {
+        limit = 20;
+    }
+    else if (event.target.id == 'btn25') {
+        limit = 25;
+    }
 
     /* This is the logic for getting the top anime and fitlering */
-    let type = "tv";
     let filter = "finished";
     let page = 1;
-    let limit = 5;
 
-    fetch(`https://api.jikan.moe/v4/top/anime?type=${type}&filter=${filter}&page=${page}&limit=${limit}`)
+    fetch(`https://api.jikan.moe/v4/top/anime?&page=${page}&limit=${limit}`)
     .then(response => response.json())
     .then(arAdd)
     .catch(error => console.warn(error));
@@ -36,8 +48,20 @@ function arAdd(data) {
 
 /* Function that waits for a response from the button */
 function pageLoaded() {
-    const form = document.getElementById('random-button');
-    form.addEventListener("submit", randomizeAnime);
+    const form = document.getElementById('btn5');
+    form.addEventListener("click", topAnime);
+
+    const form2 = document.getElementById('btn10');
+    form2.addEventListener("click", topAnime);
+
+    const form3 = document.getElementById('btn15');
+    form3.addEventListener("click", topAnime);
+
+    const form4 = document.getElementById('btn20');
+    form4.addEventListener("click", topAnime);
+
+    const form5 = document.getElementById('btn25');
+    form5.addEventListener("click", topAnime);
 }
 
 /* waits for the "load" event and searches for the button and waits for a response */

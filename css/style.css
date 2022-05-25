@@ -194,17 +194,35 @@ li, a {
 }
 
 /* Button styling for TOP and RANDOM pages */
+.cont3 {
+    display: flex;
+    justify-content: center;
+
+    /* This centers things vertically where they are at the same Y-coordinate in a sense */
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 6.6%;
+}
+.cont4 button {
+    margin: 3px 20px;
+    flex-shrink: 0;
+    width: 180px;
+}
 .btn-1 {
     cursor: pointer;
     text-decoration: none;
-    padding: 20px 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+    padding: 20px 15px;
+    border-radius: 30px;
+    transition: all 0.1s ease 0s;
+    background-color: #4afc1e;
+    border: none;
+    border: 2px solid rgba(255, 255, 255, 0);
 }
 .btn-1:hover {
-
-}
-.cont3 {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    text-align: center;
+    background-color: rgba(37, 37, 37, 0.664);
+    color: white;
+    border: 2px solid white;
 }
