@@ -30,9 +30,9 @@ function topAnime(event) {
 }
 
 function arAdd(data) {
-    const randomResults = document.getElementById('random-results');
+    const topResults = document.getElementById('top-results');
 
-    randomResults.innerHTML = data.data.map(an => {
+    topResults.innerHTML = data.data.map(an => {
         return `    
         <div class="box">
             <div class="card-image">
